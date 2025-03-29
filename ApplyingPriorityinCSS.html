@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        div{
+            /* specificity value for an tag is 0 */
+            color: red;
+        }
+        div.highlight{
+            /* specificity value for an class is 10 */
+            color: blue;
+        }
+        div#special{
+            /* specificity value for an id is 100. so the text color in green */
+            color: rgb(42, 165, 79);
+        }
+
+        /* text would be in the color in which specificity value more than the others */
+    </style>
+</head>
+<body>
+    <div class="highlight" id="special">
+        <p>Information Inside div</p>
+    </div>
+
+</body>
+</html>
