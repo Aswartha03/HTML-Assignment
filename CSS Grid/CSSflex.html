@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+    <style>
+        div#main{
+            width: 80%;
+            height: auto;
+            background-color: yellow;
+            margin: auto;
+            border: 2px solid black;
+            gap: 5px 10px;
+            display: grid;
+            flex-wrap: wrap;
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+        div#main>div{
+            border: 2px solid black;
+            margin: 12px;
+            height: 120px;
+            background-color: rgba(218, 213, 213, 0.89);
+            display: flex;
+            align-items: center; 
+            flex-shrink: 0;
+        }
+        img{
+            width: 200px;
+            padding: 5px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div> 
+            <img src="./Rohit.jpg" alt="img">
+            <div ><h3>Rohit Sharma</h3>
+                <p>Rohit Sharma is a famous Indian cricketer, known for his powerful hitting and captaincy.</p>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Rohit_Sharma">Read more</a>
+            </div>
+        </div>
+        <div>
+            <img src="./kohli.avif" alt="img">
+            <div ><h3>Virat Kohli</h3>
+                <p>Virat is one of the greatest batter of cricket history.</p>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Virat_Kohli">Read more</a>
+            </div>
+        </div>
+        <div>
+            <img src="./Jasprit_Bumrah_.webp" alt="img">
+            <div ><h3>Jasprit Bumrah</h3>
+                <p>Jasprit Jasbirsingh Bumrah is an Indian cricketer plays in all formats of the game.He is the GOAT bowler in the world.</p>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Jasprit_Bumrah">Read more</a>
+            </div>
+        </div>
+        <div>
+            <img src="./Hardik-Pandya-.webp" alt="img">
+            <div ><h3>Hardik Pandya</h3>
+                <p> Hardik pandya is an all-rounder and a right-handed middle order batsman and fast-medium bowler</p>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Hardik_Pandya">Read more</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
