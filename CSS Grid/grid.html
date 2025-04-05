@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic grid</title>
+    <style>
+        div#box{
+            width: 70%;
+            height: 50vh;
+            /* background-color: yellowgreen;x */
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* grid-template-rows: repeat(2,1fr); */
+            /* grid-auto-rows: 100px; */
+            justify-content: center;
+            gap: 10px;
+            /* align-items:center ; */
+        }
+        div#box>div:nth-of-type(1){
+            background-color: aqua;
+        }
+        div#box>div:nth-of-type(2){
+            background-color: rgb(100, 6, 163);
+        }
+        div#box>div:nth-of-type(3){
+            background-color: rgb(240, 24, 24);
+        }
+        div#box>div:nth-of-type(4){
+            background-color: rgb(13, 209, 6);
+        }
+        div#box>div:nth-of-type(5){
+            background-color: rgb(53, 71, 71);
+        }
+        div#box>div:nth-of-type(6){
+            background-color: rgb(236, 87, 28);
+        }
+        div#box>div:nth-of-type(7){
+            background-color: rgb(219, 90, 14);
+        }
+        div#box>div:nth-of-type(8){
+            background-color: rgb(224, 21, 190);
+        }
+        div#box>div{
+            border: 2px solid;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;color: red;">Basic Grid</h1>
+    <div id="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        
+    </div>
+</body>
+</html>
