@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        div#box{
+            background-color: rgb(247, 247, 243);
+            width: 60%;
+            height: 50vh;
+            margin: auto;
+            gap: 5px;
+            display: grid;
+            grid-template-columns:repeat(4,1fr) ;
+            /* grid-column: span 4; */
+            /* grid-template-areas: "one one one one"
+                                "five six seven eight"
+                                "nine ten eleven twelve"
+                                "thirteen fourteen fifteen sixteen"
+                                "seventeen eighteen nineteen twenty"; */
+        }
+        div#box>div{
+            /* margin: 10px; */
+            border:2px solid black;
+            border-radius: 10px;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div#box>div:nth-of-type(1){
+            grid-column: 1/span 4;
+
+            /* height: 25px; */
+        }
+        div#box>div:nth-of-type(1):hover{
+            background-color: rgb(153, 194, 8);
+        }
+        /*
+        div#box>div:nth-of-type(2){
+            grid-area: two;
+        }
+        div#box>div:nth-of-type(3){
+            grid-area: three;
+        }
+        div#box>div:nth-of-type(4){
+            grid-area: four;
+        }
+        div#box>div:nth-of-type(5){
+            grid-area: five;
+        }
+        div#box>div:nth-of-type(6){
+            grid-area: six;
+        }
+        div#box>div:nth-of-type(7){
+            grid-area: seven;
+        }
+        div#box>div:nth-of-type(8){
+            grid-area:eight;
+        }
+        div#box>div:nth-of-type(9){
+            grid-area: nine;
+        }
+        div#box>div:nth-of-type(10){
+            grid-area: ten;
+        }
+        div#box>div:nth-of-type(11){
+            grid-area: eleven;
+        }
+        div#box>div:nth-of-type(12){
+            grid-area: twelve;
+        }
+        div#box>div:nth-of-type(13){
+            grid-area: thirteen;
+        }
+        div#box>div:nth-of-type(14){
+            grid-area: fourteen;
+        }div#box>div:nth-of-type(15){
+            grid-area: fifteen;
+        }div#box>div:nth-of-type(16){
+            grid-area: sixteen;
+        }div#box>div:nth-of-type(17){
+            grid-area: seventeen;
+        }
+        div#box>div:nth-of-type(18){
+            grid-area: eighteen;
+        }
+        div#box>div:nth-of-type(19){
+            grid-area: nineteen;
+        }
+        div#box>div:nth-of-type(20){
+            grid-area: twenty;
+        } */
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div style="background-color: black;color: aliceblue;">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div style="background-color: black;color: aliceblue;">-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div style="background-color: black;color: aliceblue;">*</div>
+        <div style="background-color: rgb(253, 10, 10);color: aliceblue;">c</div>
+        <div>0</div>
+        <div style="background-color: black;color: aliceblue;">=</div>
+        <div style="background-color: black;color: aliceblue;">/</div>
+    </div>
+</body>
+</html>
