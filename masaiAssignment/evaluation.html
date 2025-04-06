@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container{
+            width: 75%;
+            height: auto;
+            margin:auto
+        }
+        nav{
+            /* background-color: rgb(146, 146, 241); */
+            display: flex;
+            justify-content:space-between;
+            height: 40px;
+            align-items: center;
+        }
+        nav>div#middle{
+            display: flex;
+            /* grid-template-columns: repeat(1,1fr); */
+            gap: 10px;
+        }
+        main{
+            background-color: yellow;
+        }
+        main>nav>div{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div>
+                    <img src="#stream" alt="stream">
+                </div>
+                <div id="middle"><a href="">Store</a><a href="">Community</a><a href="">About</a><a href="">Support</a></div>
+                <div>
+                    <button>Install Stream</button>
+                    <button>login</button>
+                    <button>language</button>
+                </div>
+                
+            </nav>
+        </header>
+        <main>
+            <header>
+                <nav>
+                    <div><a href="">Your Store</a><a href="">New & Noteworthy</a><a href="">Categories</a><a href="">Points Shop</a><a href="">News</a><a href="">Labs</a></div>
+                    <button>Search</button>
+                </nav>
+            </header>
+        </main>
+    </div>
+</body>
+</html>
