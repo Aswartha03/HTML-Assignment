@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Media queries</title>
+    <style>
+        div.container{
+            max-width: 1000px;
+            height: auto;
+            margin: auto;
+        }
+        div#box{
+            width: 80%;
+            height: 50vh;
+            background-color: yellow;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        /* div#box>div{
+            border: 2px solid black;
+        } */
+        @media (width>768px){
+            div#box{
+                background-color: blue;
+                display: grid;
+                /* border: 2px solid black; */
+                grid-template-columns: repeat(2,1fr);
+            }
+            #box>div{
+                border: 2px solid black;
+            }
+            
+        }
+        @media (width>1024px){
+            div#box{
+                background-color: rgb(218, 23, 153);
+                display: grid;
+                /* border: 2px solid rgb(247, 211, 8); */
+                grid-template-columns: repeat(3,1fr);
+            }
+            #box>div{
+                border: 2px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
