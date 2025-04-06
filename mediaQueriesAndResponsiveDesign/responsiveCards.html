@@ -13,20 +13,97 @@
         }
         div#top{
             /* width: 60%; */
-            height: 40vh;
-            background-color: yellow;
+            gap: 10px;
+            height: 60vh;
+            /* background-color: yellow; */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            /* align-content: center; */
+        }
+        div#top>div{
+            border: 1px solid ;
+            /* background-color: aquamarine; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 70%;
+            margin-top: 10px;
+        }
+        h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        button{
+            margin-bottom: 2px;
+        }
+        @media(width<600px){
+            div#top{
+            grid-template-columns: repeat(1,1fr);
+            justify-content: center;
+            /* align-content: center; */
+            }
+            div#top>div{
+                background-color: rgb(114, 57, 167);
+            }
+        }
+        @media(width>600px) and (width<1024px){
+            div#top{
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            /* align-content: center; */
+            }
+            div#top>div{
+                background-color: rgb(155, 6, 98);
+            }
+        }
+        @media(width>1024px){
+            div#top{
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            /* align-content: center; */
+            }
+            div#top>div{
+                background-color: rgb(116, 167, 57);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="top">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <img src="./Rohit.jpg" alt="image">
+                <h3>Rohit Sharma</h3>
+                <p>cricketer</p>
+                <button>Click</button>
+            </div>
+            <div>
+                <img src="./kohli.avif" alt="image">
+                <h3>Virat</h3>
+                <p>Crircketer</p>
+                <button>Click</button>
+            </div>
+            <div>
+                <img src="./Jasprit_Bumrah_.webp" alt="image">
+                <h3>Jasprit Bumrah</h3>
+                <p>Cricketer</p>
+                <button>Click</button>
+            </div>
+            
+            <div>
+                <img src="./Hardik-Pandya-.webp" alt="image">
+                <h3>Hardik</h3>
+                <p>Cricketer</p>
+                <button>Click</button>
+            </div>
+            
+            
+
         </div>
 
     </div>
