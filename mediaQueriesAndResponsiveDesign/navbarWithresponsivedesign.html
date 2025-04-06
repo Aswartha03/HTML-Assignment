@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Responsive</title>
+    <style>
+        div.container{
+            width: 70%;
+            height: 10vh;
+            margin: auto;
+            background-color: yellow;
+        }
+        nav{
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+
+        }
+        nav>div:nth-of-type(1){
+            width: 20%;
+            display: flex;
+            margin: 10px;
+            justify-content:space-between;
+        }
+        nav>div:nth-of-type(2){
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        @media(min-width:1024px){
+            nav>img{
+                display: none;
+            }
+            nav{
+                display: flex;
+                justify-content:space-between;
+                align-items:center;
+            }
+        }
+        @media(min-width:768px) and (max-width:1023px){
+            nav{
+                display: flex;
+                flex-direction: column;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav>img{
+                display: none;
+            }
+        }
+        @media(max-width:768px){
+            nav>img{
+                background-color: red;
+            }
+            nav>div#one,#two{
+                display: none;
+            }
+        }
+
+    </style>
+</head>   
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div><i class="fa-duotone fa-regular fa-bars"></i></div>
+                <!-- <div><FontAwesomeIcon icon="fa-regular fa-bars" /></div> -->
+                <div id="one">
+                    <img src="#home" alt="masai">
+                    <button>Courses</button>
+                </div>
+                <div id="two">
+                    <a href="">click</a>
+                    <a href="">click</a>
+                    <a href="">click</a>
+                    <a href="">click</a>
+                    <a href="">click</a>
+                    <button>Sign Up</button>
+                </div>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
