@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="task" placeholder="Enter the task" >
+    <button onclick="addTask()">Click on to add task</button>
+    <button onclick="dltTask()">Clear tasks</button>
+    <ul id="list"></ul>
+</body>
+</html>
+<script>
+    function addTask(){
+        let input = document.getElementById("task")
+        input = input.value 
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+        tasks.push(input)
+        localStorage.setItem("tasks",JSON.stringify(tasks))
+        displayTasks()
+    }
+    function displayTasks(){
+        let tasks = JSON.parse(localStorage.getItem("tasks"))
+        let ul = document.getElementById("list")
+        ul.innerText=""
+        tasks.forEach((ele)=>{
+            let li = document.createElement("li")
+            li.innerText=ele 
+            ul.appendChild(li)
+        })
+    }
+    function dltTask(){
+        localStorage.removeItem("tasks")
+        displayTasks()
+    }
+    // Eventhough we refresh the page,our recent data will appear on the UI
+    displayTasks()
+    
+
+
+    // localStorage.setItem("Name","Aswartha")
+    // localStorage.setItem("Age",25)
+
+    // let output = localStorage.getItem("Age") 
+    // console.log(output)
+    // localStorage.removeItem("Name")
+    // // localStorage.clear() 
+    // let obj = {Name:"Aswartha",Age:20}
+    // localStorage.setItem("UserData",JSON.stringify(obj))
+    // let value = localStorage.getItem("UserData")
+    // console.log(value)
+    // value = JSON.parse(value)
+    // console.log(value)
+</script>

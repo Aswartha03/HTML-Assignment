@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save and Load User Notes</title>
+</head>
+<body>
+    <textarea type="text" id="input" placeholder="Enter The Text"></textarea>
+    <button onclick="loadText()">Load Notes</button>
+    <button onclick="clearText()">Clear Notes</button>
+    <div id="div"></div>
+</body>
+</html>
+<script>
+    
+    function loadText(){
+        let inputText = document.getElementById("input") 
+        inputText=inputText.value
+        let text = JSON.parse(localStorage.getItem("Text")) || []
+        text.push(inputText)
+        localStorage.setItem("Text",JSON.stringify(text))
+        displayData()
+    }
+     function displayData(){
+        let text = JSON.parse(localStorage.getItem("Text"))
+        let div = document.getElementById("div")
+        div.innerText=""
+        text.forEach((ele)=>{
+            let p = document.createElement("p")
+            p.innerText=ele 
+            div.appendChild(p)
+        })
+    }
+    function clearText(){
+        localStorage.removeItem("Text")
+        displayData()
+    }
+
+</script>
