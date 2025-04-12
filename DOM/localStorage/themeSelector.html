@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Theme Selector Using sessionStorage</title>
+    <style>
+        .Light-theme{
+            background-color: lightblue;
+            color: black;
+        }
+        .Dark-theme{
+            background-color: darkblue;
+            color: black;
+        }
+        .theme{
+            background-color: blue;
+            color: black;
+        }
+    </style>
+</head>
+<body class="Light-theme">
+    <h1>Choose Option</h1>
+    <select name="" id="select" >
+        <option value="Light-theme">Lightblue</option>
+        <option value="Dark-theme">Darkblue</option>
+        <option value="theme">blue</option>
+    </select>
+    <h1>Heading 1</h1>
+    <p>Para 1</p>
+</body>
+</html>
+<script> 
+    localStorage.setItem('Theme',JSON.stringify("Lightblue"))
+    let basicColor = JSON.parse(localStorage.getItem("Theme"))
+    console.log(typeof basicColor)
+    let arr = ["Lightblue","Darkblue","Blue"] 
+    sessionStorage.setItem("Theme",JSON.stringify(arr))
+    let dropDown = document.getElementById("select")
+    let body = document.body
+    dropDown.addEventListener("change",function(){
+        body.className=this.value
+    })
+    
+</script>
